@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour {
-    public GameObject player;
-    private Vector3 offset;
+    public GameObject ball;
 
 	// Use this for initialization
 	void Start () {
-        offset = transform.position;
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        Vector3 newPos = new Vector3(player.transform.position.x + 5f, player.transform.position.y + 7f, player.transform.position.z);
-        transform.position = newPos;
+        Vector3 pos = new Vector3(0, ball.transform.position.y + 2, ball.transform.position.z - .5f);
+        transform.position = pos;
 	}
 }
